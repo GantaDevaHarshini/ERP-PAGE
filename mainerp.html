@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-rows: 90px 1fr;
+      grid-template-columns: 250px 1fr;
+      grid-template-areas:
+      "header header"
+      "sidebar main";
+      height: 100vh;
+      overflow: hidden;
+    }
+    header {
+      grid-area: header;
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .parent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgray;
+      height: 50px;
+      width: 100%;
+      position: relative;
+    }
+    .parent_image {
+      position: absolute;
+      left: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .parent_image img {
+      height: 45px;
+    }
+    .parent_title h1 {
+      color: darkred;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .red-header {
+      height: 40px;
+      background-color: darkred;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .red-header h2 {
+      color: white;
+      font-size: 18px;
+      background-color: cornflowerblue;
+    }
+    .red-header a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .red-header a i {
+      margin-right: 5px;
+    }
+    .leftmenu {
+      grid-area: sidebar;
+      background-color: lightgrey;
+      padding: 20px;
+      overflow-y: auto;
+      height: calc(100vh - 90px);
+    }
+    .body {
+      grid-area: main;
+      padding: 20px;
+      overflow: hidden;
+    }
+    .leftmenu summary {
+      padding: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .leftmenu summary:hover {
+      background-color: darkgrey;
+      color: white;
+    }
+    .leftmenu a{
+      color: black;
+      padding: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .leftmenu a:hover {
+      background-color: darkgrey;
+    }
+    .body img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="grid-container">
+    <header>
+      <section class="parent">
+        <section class="parent_image">
+          <img src="klverp.png" alt="Not found" />
+          <img src="klherp.png" alt="Not found" />
+        </section>
+        <section class="parent_title">
+          <h1>
+            Student Portal
+            <span style="color: cornflowerblue; font-style: italic;">-ERP</span>
+          </h1>
+        </section>
+      </section>
+      <section class="red-header">
+        <h2>KLU ERP</h2>
+        <a href="begin.html"><i class="fa fa-lock"></i>Log out</a>
+      </section>
+    </header>
+    <aside class="leftmenu">
+      <details>
+        <summary><a href="home">Home</a></summary>
+      </details>
+      <details>
+        <summary><a href="academicreg">Academic Registration</a></summary>
+        <a href="rcr">>> Regular Course Registration</a><br><br>
+        <a href="bcr">>> Betterment Course Registration</a><br><br>
+        <a href="frcr">>> Fail/ReCourse Registration</a><br><br>
+        <a href="dcr">>> Detain Course Registration</a><br><br>
+        <a href="ccr">>> Certificate Course Registration</a>
+      </details>
+      <details>
+        <summary><a href="attreg">Attendance Register</a></summary>
+      </details>
+      <details>
+        <summary><a href="careerchoice">Career Choice</a></summary>
+      </details>
+      <details>
+        <summary><a href="courses">Courses</a></summary>
+        <a href="ass">>> Assignments</a><br><br>
+        <a href="hand">>> Handouts</a><br><br>
+        <a href="mat">>> Material</a><br><br>
+        <a href="int">>> Internals</a><br><br>
+        <a href="sf">>> Session Feedback</a>
+      </details>
+      <details>
+        <summary><a href="counselling">Counselling Diary</a></summary>
+      </details>
+      <details>
+        <summary><a href="clubact">Clubs/Activities</a></summary>
+        <a href="rtc">>> Register to Club</a><br><br>
+        <a href="ce">>> Club Events</a><br><br>
+        <a href="pc">>> Projects/Consultations</a><br><br>
+        <a href="fi">>> Fellowships/Internships</a><br><br>
+        <a href="tl">>> Trainings List</a>
+      </details>
+      <details>
+        <summary><a href="examsec">Exam Section</a></summary>
+        <a href="eer">>> End Exam Result</a><br><br>
+        <a href="esr">>> Exam Seating Room</a><br><br>
+        <a href="isas">>> In Sem Answer Scripts</a><br><br>
+        <a href="tae">>> Take an Exam</a>
+      </details>
+      <details>
+        <summary><a href="feedback">Feedback</a></summary>
+      </details>
+      <details>
+        <summary><a href="feepay">Fee Payments</a></summary>
+        <a href="myp">>> My Payments</a><br><br>
+        <a href="mysfs">>> My SEM Fee Structure</a><br><br>
+        <a href="vfpso">>> Verify Fee Payment Status Online</a><br><br>
+        <a href="payh">>> PAY-HOSTEL</a><br><br>
+        <a href="payesc">>> PAY-EXAM SECTION-CERTIFICATES</a><br><br>
+        <a href="payesef">>> PAY-END SEM EXAM FEE</a><br><br>
+        <a href="paytf">>> PAY-TUTION FEE</a><br><br>
+        <a href="payp">>> PAY-PLACEMENT</a><br><br>
+        <a href="pays">>> PAY-SPORTS</a><br><br>
+        <a href="payesp">>> PAY-ERP/SAP FEE</a><br><br>
+        <a href="payrcf">>> PAY-REMEDIAL CLASS FEE</a><br><br>
+        <a href="payof">>> PAY-OTHER FEES</a><br><br>
+        <a href="payecp">>> PAY-EMPLOYABILITY CAREER PATH</a><br><br>
+        <a href="paycdf">>> PAY-CAREER DEVELOPMENT FEES</a><br><br>
+        <a href="paydcrf">>> PAY-DETAINED COURSE REGISTRATION FEE</a><br><br>
+        <a href="paycf">>> PAY-COURSERA FEE</a><br><br>
+        <a href="payd">>> PAY-DUES</a><br><br>
+        <a href="paycp">>> PAY-CHEQUE PAYMENTS</a><br><br>
+        <a href="paysdf">>> PAY-SKILL DEVELOPMENT FEES</a><br><br>
+        <a href="paytsf">>> PAY-TRAININGS FEE</a><br><br>
+        <a href="payrf">>> PAY-REREGISTRATION FEE</a>
+      </details>
+      <details>
+        <summary><a href="hostelmng">Hostel Management</a></summary>
+        <a href="rhe">>> Request Hostel Enrollment</a><br><br>
+        <a href="rr">>> Room Registration</a><br><br>
+        <a href="myhri">>> My Hostel Room Info</a>
+      </details>
+      <details>
+        <summary><a href="hallticket">Hallticket</a></summary>
+      </details>
+      <details>
+        <summary><a href="infrarel">Infrastructure Related</a></summary>
+        <a href="isl">>> Infra Software List</a><br><br>
+        <a href="sf">>> Submit Feedback</a>
+      </details>
+      <details>
+        <summary><a href="library">Library</a></summary>
+        <a href="mbb">>> My Book Borrowings</a><br><br>
+        <a href="mdh">>> My Dues History</a><br><br>
+        <a href="tl">>> Titles List</a>
+      </details>
+      <details>
+        <summary><a href="mycgpa">My CGPA</a></summary>
+      </details>
+      <details>
+        <summary><a href="nodue">No Due</a></summary>
+        <a href="mdf">>> My Dues/Fines</a><br><br>
+        <a href="afnd">>> Apply fee No Dues</a><br><br>
+        <a href="as">>> Application Status</a>
+      </details>
+      <details>
+        <summary><a href="profile">Profile</a></summary>
+        <a href="vyp">>> View Your Profile</a>
+      </details>
+      <details>
+        <summary><a href="psychometric">Psychometric Tests</a></summary>
+        <a href="testspf">>> Test: 16PF</a><br><br>
+        <a href="testrt">>> Test: REASONING TEST</a><br><br>
+        <a href="testqa">>> Test: QUANTITATIVE APTITUDE</a><br><br>
+        <a href="testva">>> Test: VERBAL APTITUDE</a><br><br>
+        <a href="testmpq">>> Test: MPQ</a>
+      </details>
+      <details>
+        <summary><a href="quizzes">Quizzes</a></summary>
+        <a href="quiz">>> Start Quiz</a>
+      </details>
+      <details>
+        <summary><a href="registraroffice">Registrar Office</a></summary>
+        <a href="mycl">>> My Circulars List</a>
+      </details>
+      <details>
+        <summary><a href="mytransport">My Transportation</a></summary>
+        <a href="sbr">>> Student Bus Registration</a><br><br>
+        <a href="sbsi">>> Student Bus Seat Info</a>
+      </details>
+      <details>
+        <summary><a href="ticketsup">Ticketing Support</a></summary>
+        <a href="rt">>> Raise Ticket</a>
+      </details>
+      <details>
+        <summary><a href="timetable">Time Tables</a></summary>
+        <a href="mtt">>> My Timetable</a>
+      </details>
+      <details>
+        <summary><a href="phdexist">PhD Exist Survey Feedback</a></summary>
+      </details>
+    </aside>
+    <main class="body">
+      <h2 style="text-align: center;">Welcome!</h2><br><br><br><br>
+      <img src="mainerppic.png" alt="img ledu bhayya" width="1000px" height="500px">
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Login Box</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+    .parent {
+      text-align: left;
+      border: 2px solid red;
+      padding: 30px;
+      border-radius: 10px;
+      width: 320px;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    input[type="number"],
+    input[type="password"],
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: cornflowerblue;
+      color: white;
+    }
+    button:hover {
+      background-color: royalblue;
+    }
+    a {
+      display: block;
+      margin: 5px 0;
+      text-decoration: none;
+      font-weight: 500;
+      color: blue;
+    }
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      display: block;
+    }
+    .remember-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+    h5{
+        background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <form action="mainerp.html">
+    <div class="parent">
+      <label for="username">Username</label>
+      <input type="number" id="username" placeholder="Enter User name" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <div class="remember-container">
+        <input type="checkbox" id="rememberme" name="rememberme" value="rememberme">
+        <label for="rememberme">Remember me</label>
+      </div>
+      <img src="captcha.png" alt="error" width="100px" height="60px">
+      <input type="text" placeholder="Enter verification code" required>
+      <a href="#forgotpass">Forgot Password?</a>
+      <a href="#parentreg">Parent Registration?</a>
+      <a href="#mfareg">MFA Registration?</a>
+      <button type="submit">Login</button>
+    </div>
+    <h5>&copy; Copyright 2019 by K L Deemed to be University</h5>
+  </form>
+</body>
+</html>
